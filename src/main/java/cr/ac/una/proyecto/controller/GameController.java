@@ -104,7 +104,7 @@ progressElixir.progressProperty().bind(
 LblElixir.textProperty().bind(
     state.elixirProperty().asString("%.0f")
         .concat(" / ")
-        .concat(state.maxElixirProperty().asString("%.0f"))
+        .concat(state.maxElixirProperty().asObject().asString())
 );
 
 
