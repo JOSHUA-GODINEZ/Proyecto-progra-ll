@@ -7,36 +7,40 @@ import javafx.beans.property.SimpleIntegerProperty;
 
 public class GameState {
 
-    // 🔥 instancia única (singleton simple)
+    // instancia única (singleton simple)
     private static final GameState instance = new GameState();
 
     public static GameState getInstance() {
         return instance;
     }
 int defaultHealth =1000;
-    // 🔥 propiedades (para binding)
+    //  propiedades (para binding)
     private IntegerProperty health = new SimpleIntegerProperty(1000);
     private IntegerProperty coins  = new SimpleIntegerProperty(0);
+    private int coinsStartLevel = 0;
     private IntegerProperty wave   = new SimpleIntegerProperty(1);
     private IntegerProperty baseHealth = new SimpleIntegerProperty(1000);
     private IntegerProperty bonusHealth = new SimpleIntegerProperty(1000);
     private IntegerProperty upgradeLevel = new SimpleIntegerProperty(1);
     private IntegerProperty upgradeCost = new SimpleIntegerProperty(50);
-   // 🔥 ELIXIR
+   //  ELIXIR
+    private IntegerProperty elixirCapacityCost = new SimpleIntegerProperty(40);
+private IntegerProperty elixirCapacityLevel = new SimpleIntegerProperty(1);
     private DoubleProperty elixir = new SimpleDoubleProperty(0);
-    private DoubleProperty maxElixir = new SimpleDoubleProperty(100);
+    private IntegerProperty maxElixir = new SimpleIntegerProperty(100);
+    private IntegerProperty bonusElixirSize = new SimpleIntegerProperty(50);
     private DoubleProperty elixirRegen = new SimpleDoubleProperty(1); 
-    // 🔹 health
+    //  health
     public int getHealth() { return health.get(); }
     public void setHealth(int value) { health.set(value); }
     public IntegerProperty healthProperty() { return health; }
 
-    // 🔹 coins
+    //  coins
     public int getCoins() { return coins.get(); }
     public void setCoins(int value) { coins.set(value); }
     public IntegerProperty coinsProperty() { return coins; }
 
-    // 🔹 wave
+    //  wave
     public int getWave() { return wave.get(); }
     public void setWave(int value) { wave.set(value); }
     public IntegerProperty waveProperty() { return wave; }
@@ -84,8 +88,38 @@ public void setElixir(double value) { elixir.set(value); }
 public DoubleProperty elixirProperty() { return elixir; }
 
 public double getMaxElixir() { return maxElixir.get(); }
-public DoubleProperty maxElixirProperty() { return maxElixir; }
+public IntegerProperty maxElixirProperty() { return maxElixir; }
+public double getBonusElixirSize() { return bonusElixirSize.get(); }
+public IntegerProperty BonusElixirSizeProperty() { return bonusElixirSize; }
+public double getCostElixirSize() { return elixirCapacityCost.get(); }
+public IntegerProperty CostElixirSizeProperty() { return elixirCapacityCost; }
 
 public double getElixirRegen() { return elixirRegen.get(); }
 public DoubleProperty elixirRegenProperty() { return elixirRegen; }
+
+
+
+public void startLevel() {
+    coinsStartLevel = coins.get();
+}
+public void resetCoinsToLevelStart() {
+    coins.set(coinsStartLevel);
+}
+
+  public void upgradeElixirCapacity() {
+
+    if (coins.get() >= elixirCapacityCost.get()) {
+
+        coins.set(coins.get() - elixirCapacityCost.get());
+
+        maxElixir.set(maxElixir.get() + 50);
+
+        elixirCapacityLevel.set(elixirCapacityLevel.get() + 1);
+
+        elixirCapacityCost.set(elixirCapacityCost.get() + 40);
+    }
+}
+
+    public IntegerProperty upgradeLevelElixirSizeProperty() { return elixirCapacityLevel; }
+
 }

@@ -19,6 +19,7 @@ import javafx.scene.layout.Pane;
 import javafx.animation.Timeline;
 import javafx.animation.KeyFrame;
 import javafx.animation.TranslateTransition;
+import javafx.beans.property.DoubleProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
@@ -81,6 +82,8 @@ GameState state = GameState.getInstance();
     private ProgressBar progressElixir;
     long lastTime = System.currentTimeMillis();
     
+    
+
           @Override
            public void initialize(URL url, ResourceBundle rb) {
            LblLevel.setText(String.valueOf(level));
@@ -177,7 +180,7 @@ for (int i = 1; i <= MAX_WAVES; i++) {
 
               state.setCoins(state.getCoins() + 10);
 
-                rootSpawner.getChildren().remove(m.getSprite());
+               rootSpawner.getChildren().remove(m.getView());
                 it.remove(); // 🔥 eliminar correctamente
             }
     
@@ -186,7 +189,7 @@ for (int i = 1; i <= MAX_WAVES; i++) {
         
         // GAME WIN
         if (!gameOver && wave == MAX_WAVES && !enOleada && !enPreSpawn && enemy.isEmpty() && state.getHealth() > 0) {
-
+     state.startLevel();
     gameOver = true; 
 
     loop.stop();
@@ -199,7 +202,7 @@ for (int i = 1; i <= MAX_WAVES; i++) {
 
         // GAME OVER
         if (!gameOver && state.getHealth() <= 0) {
-
+          state.resetCoinsToLevelStart();
             gameOver = true;
 
             loop.stop();
@@ -223,27 +226,33 @@ private void onActionSpaw(ActionEvent event) {
     while (it.hasNext()) {
         Enemy m = it.next();
 
-       state.setCoins(state.getCoins() + 10); 
+        // 🔥 aplicar daño
+        m.takeDamage(10);
 
-        rootSpawner.getChildren().remove(m.getSprite());
-        it.remove();
+        // 🔥 si muere, eliminar
+        if (m.isDead()) {
+            state.setCoins(state.getCoins() + 10);
+
+            rootSpawner.getChildren().remove(m.getView());
+            it.remove();
+        }
     }
 }
 
     
  private void spawnMonsterNormal() {
-    crearMonster(100,5,0, 2, monsterNormalImg);
+    crearMonster(1,5,0, 2, monsterNormalImg);
 }
 
 private void spawnMonsterFast() {
-    crearMonster(50,2, 0,4, monsterFastImg);
+    crearMonster(1,2, 0,4, monsterFastImg);
 }
 
 private void spawnMonsterTank() {
-    crearMonster(200,10, 0,1, monsterTankImg);
+    crearMonster(1,10, 0,1, monsterTankImg);
 }
 private void spawnMonsterAereo() {
-    crearMonster(50,8, 700,2, monsterFlyImg);
+    crearMonster(1,8, 700,2, monsterFlyImg);
 }
     
     private void crearMonster(int health,int damageSecond, int distanceAttack, double speed, Image img) {
@@ -251,7 +260,7 @@ private void spawnMonsterAereo() {
     double y = Math.random() * (rootSpawner.getHeight() - 60);
     Enemy m = new Enemy(health,damageSecond, speed,distanceAttack, x, y, img);
     enemy.add(m);
-    rootSpawner.getChildren().add(m.getSprite());
+rootSpawner.getChildren().add(m.getView());
 }
     private void crearMonster1(int tipo) {
 
@@ -398,7 +407,7 @@ private void siguienteFase() {
 private void onActionNextLevel(ActionEvent event) {
     level++;
     LblLevel.setText(String.valueOf(level));
-
+ 
     if (loop != null) loop.stop();
     if (spawnLoop != null) spawnLoop.stop();
 
@@ -412,10 +421,9 @@ private void onActionNextLevel(ActionEvent event) {
     enemigosGeneradosTotal = 0;
     progressBar.setProgress(0);
     gameOver = false;
-
-    state.setHealth(2000);
-       LblHP.textProperty().bind(state.healthProperty().asString());
-
+     state.setHealth(state.getMaxHealth());
+  ///     LblHP.textProperty().bind(state.healthProperty().asString());
+    lblProgress.setText(String.valueOf(0));
     rootWin.setVisible(false);
 
     loop.start();
@@ -448,7 +456,7 @@ private void onActionNextLevel(ActionEvent event) {
 
 @FXML
 private void onActionUpgrates(ActionEvent event) {
-
+       state.resetCoinsToLevelStart();
    try {
     FXMLLoader loader = new FXMLLoader(
         getClass().getResource("/cr/ac/una/proyecto/view/UpgradesView.fxml")

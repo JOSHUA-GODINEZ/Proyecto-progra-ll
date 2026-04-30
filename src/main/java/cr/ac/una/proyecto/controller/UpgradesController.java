@@ -23,9 +23,25 @@ public class UpgradesController implements Initializable {
     @FXML
     private Label LblNumberHealth;
     @FXML
-    private Label LblCost;
-    @FXML
     private ProgressBar progressHealth;
+    @FXML
+    private Label LblHealthCost;
+    @FXML
+    private Label LblLevelElixirSize;
+    @FXML
+    private Label LblNumberElixirSize;
+    @FXML
+    private Label LblElixirSizeCost;
+    @FXML
+    private ProgressBar progressElixirSize;
+    @FXML
+    private Label LblLevelElixirSpeed;
+    @FXML
+    private Label LblNumberElixirSpeed;
+    @FXML
+    private ProgressBar progressElixirSpeed;
+    @FXML
+    private Label LblElixirSipeedCost;
       
 @FXML
 private void onActionHealth(ActionEvent event) {
@@ -44,7 +60,7 @@ LblNumberHealth.textProperty().bind(
 );
 
     //  Costo (coins / costo)
-    LblCost.textProperty().bind(
+    LblHealthCost.textProperty().bind(
         state.coinsProperty().asString()
             .concat("/")
             .concat(state.upgradeCostProperty().asString())
@@ -52,6 +68,32 @@ LblNumberHealth.textProperty().bind(
     progressHealth.progressProperty().bind(
     state.coinsProperty().multiply(1.0).divide(state.upgradeCostProperty())
 );
+    
+//////////////////////////////
+    LblLevelElixirSize.textProperty().bind(state.upgradeLevelElixirSizeProperty().asString());
+    
+    LblNumberElixirSize.textProperty().bind(
+    state.maxElixirProperty().asString()
+        .concat(" + ")
+        .concat(state.BonusElixirSizeProperty().asString())
+);
+    
+       LblElixirSizeCost.textProperty().bind(
+        state.coinsProperty().asString()
+            .concat("/")
+            .concat(state.CostElixirSizeProperty().asString())
+    );
+    progressElixirSize.progressProperty().bind(
+    state.coinsProperty().multiply(1.0).divide(state.CostElixirSizeProperty())
+);
+    
+    
+    
+    
+    
+    
+    
+    
     }    
 
     @FXML
@@ -114,6 +156,15 @@ LblNumberHealth.textProperty().bind(
     } catch (IOException e) {
         e.printStackTrace();
     }
+    }
+
+    @FXML
+    private void onActionElixirSize(ActionEvent event) {
+          state.upgradeElixirCapacity();
+    }
+
+    @FXML
+    private void onActionElixirSpeed(ActionEvent event) {
     }
 
 
