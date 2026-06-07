@@ -1,0 +1,913 @@
+/*Botones*/
+.fx-buttonPause{
+    -fx-background-image: url("../resources/pause.png");
+}
+.fx-buttonResume{
+    -fx-background-image: url("../resources/Jugar.png");
+}
+
+.fx-buttonReset{
+    -fx-background-image: url("../resources/Reiniciar.png");
+}
+.fx-buttonHome{
+    -fx-background-image: url("../resources/Home.png");
+}
+.fx-buttonUpgrades{
+    -fx-background-image: url("../resources/Mejoras.png");
+}
+.fx-buttonLevelUp{
+    -fx-background-image: url("../resources/SubirNivel.png");
+}
+.fx-buttonNeztLevel{
+    -fx-background-image: url("../resources/siguineteNivel.png");
+}
+.fx-buttonSwapSkin{
+    -fx-background-image: url("../resources/swapSkin.png");
+}
+.fx-buttonConfiguration{
+    -fx-background-image: url("../resources/configuration.png");
+}
+.fx-buttonKeyboard{
+    -fx-background-image: url("../resources/keyboard.png");
+}
+.fx-buttonMouse{
+    -fx-background-image: url("../resources/mouse.png");
+}
+.fx-buttonMous1e{
+     -fx-background-image: url("/images/Agregar.png");
+}
+.fx-buttonAvatar{
+     -fx-background-image: url("../resources/default.png");
+}
+
+.btnAgregar {
+    -fx-background-color: transparent;
+    -fx-background-image: url("/images/Agregar.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: contain;
+}
+
+
+/* Clase base para TODOS los botones */
+.fx-gameButton{
+    
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+    -fx-background-radius: 50px;
+    -fx-background-color: #00000000;
+
+    -fx-cursor: hand;
+-fx-padding: 10px 20px 10px 20px;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+/* Hover para todos */
+/* =========================
+   HOVER ROJO TRANSPARENTE
+   ========================= */
+
+.fx-gameButton:hover{
+-fx-padding: 10px 20px 10px 20px;
+    /* Fondo rojo transparente elegante */
+    -fx-background-color:
+        rgba(255, 0, 0, 0.18);
+
+    /* Borde rojo suave */
+    -fx-border-color:
+        rgba(255, 80, 80, 0.65);
+
+    -fx-border-width: 1.5;
+
+    -fx-border-radius: 12;
+
+    /* Glow rojo profesional */
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(255, 0, 0, 0.55),
+            18,
+            0.45,
+            0,
+            0
+        );
+
+    /* Ligero zoom */
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+
+/* =========================
+   CLICK
+   ========================= */
+
+.fx-gameButton:pressed{
+
+    -fx-scale-x: 0.96;
+    -fx-scale-y: 0.96;
+
+    /* Rojo más fuerte al presionar */
+    -fx-background-color:
+        rgba(180, 0, 0, 0.35);
+
+    -fx-border-color:
+        rgba(255, 120, 120, 0.8);
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(255, 0, 0, 0.75),
+            10,
+            0.35,
+            0,
+            1
+        );
+}
+
+
+
+
+
+
+
+/*Fondos*/
+.fx-FondoJuego{
+ -fx-background-image: url("../resources/ground_decor.png");
+    -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego1{
+ -fx-background-image: url("../resources/back_decor1.png");
+    -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego2{
+ -fx-background-image: url("../resources/back_land1.png");
+    -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego3{
+ -fx-background-image: url("../resources/battleground.png");
+    -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego4{
+ -fx-background-image: url("../resources/front_decor.png");
+    -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego5{
+ -fx-background-image: url("../resources/Fondo5.png");
+    -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+/*********************************************************************************/
+
+
+.fx-FondoJuego6{
+ -fx-background-image: url("../resources/bomb.png");
+    -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego7{
+ -fx-background-image: url("../resources/snow.png");
+    -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego8{
+ -fx-background-image: url("../resources/FondoMenu1.png");
+    -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego9{
+ -fx-background-image: url("../resources/base233.png");
+    -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego10{
+ -fx-background-image: url("../resources/fondoMetal.png");
+    -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego11{
+ -fx-background-image: url("../resources/boton.png");
+      -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego12{
+ -fx-background-image: url("../resources/boton1.png");
+      -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego13{
+ -fx-background-image: url("../resources/boton2.png");
+      -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.fx-FondoJuego14{
+ -fx-background-image: url("../resources/boton3.png");
+      -fx-background-size: stretch;  
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+
+
+
+
+/* Estilo para la tarjeta contenedora de cada usuario */
+.tarjeta-usuario {
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-background-color: #ffffff;
+    -fx-padding: 12px;
+    -fx-alignment: center-left;
+    /* Efecto de sombra suave */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+/* Efecto visual cuando el mouse pasa por encima de la tarjeta */
+.tarjeta-usuario:hover {
+    -fx-border-color: #2196f3;
+    -fx-cursor: hand;
+    -fx-background-color: #f9fbfd;
+}
+
+/* Estilo para que el nombre del usuario se vea más grande y elegante */
+.label-usuario {
+    -fx-font-size: 25px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+  
+}
+.label-usuario1 {
+    -fx-font-size: 35px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+  
+}
+
+
+/* Estilo para el botón de eliminar moderno */
+.btn-eliminar {
+    -fx-background-color: #ff4d4d;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 12px;
+    -fx-cursor: hand;
+}
+
+.btn-eliminar:hover {
+    -fx-background-color: #e60000;
+}
+/* Estilo para que las fotos de perfil tengan bordes redondeados modernos */
+.tarjeta-usuario .image-view {
+    -fx-background-radius: 50%; /* Intenta hacerla circular si la imagen base es cuadrada */
+    -fx-border-radius: 4px;
+}
+.mi-image-view-Useers {
+    -fx-image: url("../resources/default.png");
+}
+.mi-image-view-Play {
+    -fx-image: url("../resources/Jugar.png");
+}
+.mi-image-view-Opcions {
+    -fx-image: url("../resources/configuration.png");
+}
+.mi-image-view-Upgrades {
+    -fx-image: url("../resources/Mejoras.png");
+}
+.mi-image-view-Trofeo {
+    -fx-image: url("../resources/trofeo.png");
+}
+.mi-image-view-Menu {
+    -fx-image: url("../resources/Home.png");
+}
+.mi-image-view-Jugar {
+    -fx-image: url("../resources/Jugar.png");
+}
+.mi-image-view-Mejorar {
+    -fx-image: url("../resources/SubirNivel.png");
+}
+.mi-image-view-Salir {
+    -fx-image: url("../resources/Salir.png");
+}
+.mi-image-view-Pause {
+    -fx-image: url("../resources/pause.png");
+}
+.mi-image-view-Monedas {
+    -fx-image: url("../resources/Gold_21.png");
+}
+.mi-image-view-Home {
+    -fx-image: url("../resources/Home.png");
+}
+.mi-image-view-Reset {
+    -fx-image: url("../resources/Reiniciar.png");
+}
+.mi-image-view-Mosue {
+    -fx-image: url("../resources/mouse.png");
+}
+.mi-image-view-Keyboard {
+    -fx-image: url("../resources/keyboard.png");
+}
+.mi-image-view-Arma1 {
+    -fx-image: url("../resources/Gun2.png");
+}
+.mi-image-view-Arma2 {
+    -fx-image: url("../resources/gun4.png");
+}
+.mi-image-view-espanol {
+    -fx-image: url("../resources/espanol.png");
+}
+.mi-image-view-Ingles {
+    -fx-image: url("../resources/Ingles.png");
+}
+.mi-image-view-completa {
+    -fx-image: url("../resources/completa.png");
+}
+.mi-image-view-bordes {
+    -fx-image: url("../resources/bordes.png");
+}
+
+
+
+
+
+.mi-image-view-mejoraVida {
+    -fx-image: url("../resources/mejoraVida.png");
+}.mi-image-view-mejoraSpeed {
+    -fx-image: url("../resources/mejoraSpeed.png");
+}.mi-image-view-mejoraPowerRange {
+    -fx-image: url("../resources/mejoraPowerRange.png");
+}.mi-image-view-mejoraDamageGun {
+    -fx-image: url("../resources/mejoraDamageGun.png");
+}.mi-image-view-mejoraSpeedGun {
+    -fx-image: url("../resources/mejoraSpeedGun.png");
+}.mi-image-view-mejoraDuratio {
+    -fx-image: url("../resources/mejoraDuratio.png");
+}.mi-image-view-mejoraDamage {
+    -fx-image: url("../resources/mejoraDamage.png");
+}.mi-image-view-mejorarFreezeRange {
+    -fx-image: url("../resources/mejorarFreezeRange.png");
+}.mi-image-view-mejoraCapasidad {
+    -fx-image: url("../resources/mejoraCapasidad.png");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.label-Visibles {
+    
+    /* Fuente elegante */
+    -fx-font-family: "Poppins", "Segoe UI", sans-serif;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+    /* Color del texto */
+    -fx-text-fill: white;
+
+    /* Fondo moderno semitransparente */
+    -fx-background-color: rgba(0, 0, 0, 0.45);
+
+    /* Bordes redondeados */
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+
+    /* Espaciado interno */
+    -fx-padding: 6 12 6 12;
+
+    /* Sombra para que destaque sobre cualquier fondo */
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(0,0,0,0.9),
+        10,
+        0.4,
+        0,
+        2
+    );
+
+    /* Espaciado elegante */
+    -fx-letter-spacing: 0.5px;
+}
+
+/* Efecto hover */
+.label-Visibles:hover {
+
+    -fx-text-fill: #990000;
+
+    -fx-background-color: rgba(0, 0, 0, 1);
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(153, 0, 0, 1),
+        15,
+        0.5,
+        0,
+        0
+    );
+}
+  /* ===================================
+   PROGRESS BAR 
+   =================================== */
+
+/* Fondo de la barra */
+.progress-bar {
+
+    -fx-pref-height: 20px;
+
+    /* Fondo oscuro elegante */
+    -fx-background-color: transparent;
+
+    /* Bordes suaves */
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+}
+
+/* Parte vacía */
+/* =========================
+   CLASE BARRA ROJA
+   ========================= */
+
+.barra-roja > .track {
+    -fx-background-color: #1b1b1b;
+    -fx-background-radius: 10;
+}
+
+.barra-roja > .bar {
+
+    -fx-background-color:
+        linear-gradient(to right, #ff4d4d, #ff0000);
+
+    -fx-background-radius: 10;
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(255,0,0,0.7),
+        12,
+        0.4,
+        0,
+        0
+    );
+}
+
+
+/* =========================
+   CLASE BARRA AZUL
+   ========================= */
+
+.barra-azul > .track {
+    -fx-background-color: #1b1b1b;
+    -fx-background-radius: 10;
+}
+
+.barra-azul > .bar {
+
+    -fx-background-color:
+        linear-gradient(to right, #4da6ff, #0080ff);
+
+    -fx-background-radius: 10;
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(0,128,255,0.7),
+        12,
+        0.4,
+        0,
+        0
+    );
+}
+
+
+/* =========================
+   CLASE BARRA MORADA
+   ========================= */
+
+.barra-morada > .track {
+    -fx-background-color: #1b1b1b;
+    -fx-background-radius: 10;
+}
+
+.barra-morada > .bar {
+
+    -fx-background-color:
+          linear-gradient(to bottom, #990099, #660066);
+
+    -fx-background-radius: 10;
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(102, 0, 51, 1),
+        12,
+        0.4,
+        0,
+        0
+    );
+}
+
+/* =========================
+   TAB ROJO
+   ========================= */
+
+.tab-rojo {
+
+    -fx-background-color:
+        linear-gradient(to bottom, #ff4d4d, #990000);
+
+    -fx-background-radius: 10 10 0 0;
+
+    -fx-padding: 8 20 8 20;
+}
+
+.tab-rojo .tab-label {
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+
+    -fx-font-weight: bold;
+
+    -fx-font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+
+/* =========================
+   TAB VERDE
+   ========================= */
+
+.tab-verde {
+
+    -fx-background-color:
+        linear-gradient(to bottom, #66ff99, #008f39);
+
+    -fx-background-radius: 10 10 0 0;
+
+    -fx-padding: 8 20 8 20;
+}
+
+.tab-verde .tab-label {
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+
+    -fx-font-weight: bold;
+
+    -fx-font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+
+/* =========================
+   TAB AZUL
+   ========================= */
+
+.tab-azul {
+
+    -fx-background-color:
+        linear-gradient(to bottom, #4da6ff, #0047b3);
+
+    -fx-background-radius: 10 10 0 0;
+
+    -fx-padding: 8 20 8 20;
+}
+
+.tab-azul .tab-label {
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+
+    -fx-font-weight: bold;
+
+    -fx-font-family: "Poppins", "Segoe UI", sans-serif;
+}
+/* Quitar borde azul/focus del Tab */
+
+.tab-pane .tab-header-area .tab {
+
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* También elimina el borde interno azul */
+.tab-pane *.tab-header-background {
+     -fx-background-color: transparent;
+}
+
+
+
+
+
+
+/* =========================
+   HBOX METAL VERDE
+   ========================= */
+
+
+/* =========================
+   HOVER
+   ========================= */
+.boton-mejora {
+    -fx-background-color: linear-gradient(
+        to bottom,
+        #99ff99 0%,
+        #00ff33 40%,
+        #33ff00 50%,
+        #00cc00 100%
+    );
+}
+.boton-mejora:hover {
+
+    -fx-background-color:
+        linear-gradient(to bottom,
+        #fff1a8 0%,
+        #ffd54f 40%,
+        #ffca28 50%,
+        #ffb300 100%);
+
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(255,215,0,0.9),
+        25,
+        0.5,
+        0,
+        0
+    );
+}
+
+
+/* =========================
+   CLICK
+   ========================= */
+
+.boton-mejora:pressed {
+
+    -fx-scale-x: 0.96;
+    -fx-scale-y: 0.96;
+
+    -fx-background-color:
+        linear-gradient(to bottom,
+        #ffb300,
+        #ff8f00);
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(255,140,0,0.7),
+        10,
+        0.3,
+        0,
+        1
+    );
+}
+
+
+
+
+
+/* =========================
+   SCROLLPANE TRANSPARENTE
+   ========================= */
+
+.scroll-pane {
+
+    -fx-background-color: transparent;
+
+    -fx-background: transparent;
+}
+
+/* Área interna */
+.scroll-pane > .viewport {
+
+    -fx-background-color: transparent;
+}
+
+/* Contenedor interno */
+.scroll-pane .content {
+
+    -fx-background-color: transparent;
+}
+
+/* Esquinas */
+.scroll-pane .corner {
+
+    -fx-background-color: transparent;
+}
+/* =========================
+   SCROLLBAR MODERNA
+   ========================= */
+
+/* Fondo general */
+.scroll-bar {
+
+    -fx-background-color: transparent;
+}
+
+
+/* TRACK (fondo de la barra) */
+.scroll-bar .track {
+
+    -fx-background-color:
+        rgba(255,255,255,0.08);
+
+    -fx-background-radius: 10;
+
+    -fx-border-radius: 10;
+}
+
+
+/* THUMB (parte que se mueve) */
+.scroll-bar .thumb {
+
+    -fx-background-color:
+        linear-gradient(to bottom,
+        #5e5e5e,
+        #2e2e2e);
+
+    -fx-background-radius: 10;
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(0,0,0,0.5),
+        6,
+        0.3,
+        0,
+        1
+    );
+}
+
+
+/* Hover */
+.scroll-bar .thumb:hover {
+
+    -fx-background-color:
+        linear-gradient(to bottom,
+        #8a8a8a,
+        #4a4a4a);
+}
+
+
+/* Click */
+.scroll-bar .thumb:pressed {
+
+    -fx-background-color:
+        linear-gradient(to bottom,
+        #aaaaaa,
+        #666666);
+}
+
+
+/* Quitar botones feos */
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+
+    -fx-background-color: transparent;
+
+    -fx-padding: 0;
+}
+
+
+/* Quitar flechas */
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+
+    -fx-shape: "";
+    -fx-padding: 0;
+}
+
+.dialog-pane.fx-FondoJuego11,
+.dialog-pane.fx-FondoJuego11 > .anchor-pane,
+.dialog-pane.fx-FondoJuego11 .header-panel,
+.dialog-pane.fx-FondoJuego11 .content,
+.dialog-pane.fx-FondoJuego11 .button-bar {
+    -fx-background-color: transparent; 
+}
+
+.dialog-pane.fx-FondoJuego11 {
+    -fx-background-color: #1e1e24; /* Tu color oscuro de fondo */
+    -fx-border-color: #ff4444;     /* Borde rojo de tu juego */
+    -fx-border-width: 2px;
+}
+
+/* 🔤 2. TEXTO DE ARRIBA (Header) */
+.dialog-pane.label-usuario .header-panel .label {
+    -fx-text-fill: #ffffff;       
+    -fx-font-size: 16px;          
+    -fx-font-weight: bold;        
+    -fx-font-family: "Arial", sans-serif; 
+}
+
+/* 🔤 3. TEXTO DE ABAJO (Content) */
+/* 🔥 LE CORREMOS TU CLASE DIRECTAMENTE AL TEXTO REBELDE DE JAVAFX */
+.dialog-pane.label-usuario .content .label,
+.dialog-pane.label-usuario .content .text {
+    /* Aquí le decimos a JavaFX que copie las propiedades de tu clase .label-usuario */
+    -fx-text-fill: inherit; 
+    -fx-font: inherit;
+    
+    /* Por si acaso JavaFX usa un componente Text, forzamos el color que trae tu clase */
+    -fx-fill: #ffffff; 
+}
+
+/* 🕹️ 4. BOTONES */
+.dialog-pane.fx-FondoJuego11 .button {
+    -fx-background-color: #33333b;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.dialog-pane.fx-FondoJuego11 .button:hover {
+    -fx-background-color: #ff4444;
+    -fx-text-fill: black;
+}
+
+
+
+.slider .track {
+    -fx-background-color: #1f2937;
+    -fx-background-radius: 10;
+    -fx-pref-height: 8;
+}
+
+.slider .thumb {
+    -fx-background-color: #22c55e;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 20;
+    -fx-pref-height: 20;
+
+    -fx-effect: dropshadow(gaussian,
+                           rgba(34,197,94,0.6),
+                           10, 0, 0, 0);
+}
+
+.slider .thumb:hover {
+    -fx-background-color: #4ade80;
+}
+
+
+.tab .tab-label {
+    -fx-text-fill: white;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-padding: 5 15 5 15;
+        -fx-background-color: transparent;
+}
+.tab:selected {
+    -fx-padding: 10 20 10 20;
+}
+.titulo {
+    -fx-font-size: 50px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+
+    -fx-effect: dropshadow(gaussian, #ff0000, 5, 0.8, 0, 0);
+}
+.label-error {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ff4444;
+
+    -fx-effect: dropshadow(
+        gaussian,
+        #990000,
+        15,
+        0.8,
+        0,
+        0
+    );
+}

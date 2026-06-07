@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                                 https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+  <persistence-unit name="UNAPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>cr.ac.una.proyecto.model.Users</class>
+    <class>cr.ac.una.proyecto.model.UserConfigGeneral</class>
+    <class>cr.ac.una.proyecto.model.UsersConfig</class>
+    <class>cr.ac.una.proyecto.model.UsersConfigLevel</class>
+    <properties>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/XEPDB1"/>
+      <property name="jakarta.persistence.jdbc.user" value="una"/>
+      <property name="jakarta.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="jakarta.persistence.jdbc.password" value="una"/>
+      <property name="eclipselink.id-validation" value="NULL"/>
+      <property name="eclipselink.weaving" value="false"/>
+    </properties>
+  </persistence-unit>
+</persistence>
