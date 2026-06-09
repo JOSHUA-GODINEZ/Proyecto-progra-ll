@@ -244,6 +244,6 @@ public static void playFondo1Sound() {
     public static Double getEfectVolume() { return efectVolume.get(); }
     public static void setEfectVolume(DoubleProperty efectVolume) { SoundManager.efectVolume = efectVolume; }
 
-    public static double getWalkVolume() { return enemyVolume.get()/2; }
+    public static double getWalkVolume() { return enemyVolume.get()/3; }
     public static DoubleProperty walkVolumeProperty() { return enemyVolume; }
 }

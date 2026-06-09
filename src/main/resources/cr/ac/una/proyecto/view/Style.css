@@ -66,17 +66,13 @@
 }
 
 /* Hover para todos */
-/* =========================
-   HOVER ROJO TRANSPARENTE
-   ========================= */
 
 .fx-gameButton:hover{
 -fx-padding: 10px 20px 10px 20px;
-    /* Fondo rojo transparente elegante */
     -fx-background-color:
         rgba(255, 0, 0, 0.18);
 
-    /* Borde rojo suave */
+    /* Borde rojo */
     -fx-border-color:
         rgba(255, 80, 80, 0.65);
 
@@ -84,7 +80,7 @@
 
     -fx-border-radius: 12;
 
-    /* Glow rojo profesional */
+
     -fx-effect:
         dropshadow(
             gaussian,
@@ -95,22 +91,16 @@
             0
         );
 
-    /* Ligero zoom */
     -fx-scale-x: 1.03;
     -fx-scale-y: 1.03;
 }
 
-
-/* =========================
-   CLICK
-   ========================= */
 
 .fx-gameButton:pressed{
 
     -fx-scale-x: 0.96;
     -fx-scale-y: 0.96;
 
-    /* Rojo más fuerte al presionar */
     -fx-background-color:
         rgba(180, 0, 0, 0.35);
 
@@ -127,12 +117,6 @@
             1
         );
 }
-
-
-
-
-
-
 
 /*Fondos*/
 .fx-FondoJuego{
@@ -171,9 +155,6 @@
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
 }
-
-/*********************************************************************************/
-
 
 .fx-FondoJuego6{
  -fx-background-image: url("../resources/bomb.png");
@@ -231,10 +212,6 @@
 }
 
 
-
-
-
-/* Estilo para la tarjeta contenedora de cada usuario */
 .tarjeta-usuario {
     -fx-border-color: #e0e0e0;
     -fx-border-radius: 8px;
@@ -246,31 +223,28 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
 }
 
-/* Efecto visual cuando el mouse pasa por encima de la tarjeta */
 .tarjeta-usuario:hover {
     -fx-border-color: #2196f3;
     -fx-cursor: hand;
     -fx-background-color: #f9fbfd;
 }
 
-/* Estilo para que el nombre del usuario se vea más grande y elegante */
 .label-usuario {
     -fx-font-size: 25px;
     -fx-font-family: "Segoe UI", "Arial", sans-serif;
     -fx-font-weight: bold;
     -fx-text-fill: #ffffff;
-  
 }
+
 .label-usuario1 {
     -fx-font-size: 35px;
     -fx-font-family: "Segoe UI", "Arial", sans-serif;
     -fx-font-weight: bold;
     -fx-text-fill: #ffffff;
-  
 }
 
 
-/* Estilo para el botón de eliminar moderno */
+/* Estilo para el botón de eliminar */
 .btn-eliminar {
     -fx-background-color: #ff4d4d;
     -fx-background-radius: 6px;
@@ -281,9 +255,9 @@
 .btn-eliminar:hover {
     -fx-background-color: #e60000;
 }
-/* Estilo para que las fotos de perfil tengan bordes redondeados modernos */
+
 .tarjeta-usuario .image-view {
-    -fx-background-radius: 50%; /* Intenta hacerla circular si la imagen base es cuadrada */
+    -fx-background-radius: 50%; 
     -fx-border-radius: 4px;
 }
 .mi-image-view-Useers {
@@ -350,10 +324,6 @@
     -fx-image: url("../resources/bordes.png");
 }
 
-
-
-
-
 .mi-image-view-mejoraVida {
     -fx-image: url("../resources/mejoraVida.png");
 }.mi-image-view-mejoraSpeed {
@@ -374,43 +344,21 @@
     -fx-image: url("../resources/mejoraCapasidad.png");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .label-Visibles {
-    
-    /* Fuente elegante */
+
     -fx-font-family: "Poppins", "Segoe UI", sans-serif;
     -fx-font-size: 15px;
     -fx-font-weight: bold;
 
-    /* Color del texto */
     -fx-text-fill: white;
 
-    /* Fondo moderno semitransparente */
     -fx-background-color: rgba(0, 0, 0, 0.45);
 
-    /* Bordes redondeados */
     -fx-background-radius: 10;
     -fx-border-radius: 10;
 
-    /* Espaciado interno */
     -fx-padding: 6 12 6 12;
 
-    /* Sombra para que destaque sobre cualquier fondo */
     -fx-effect: dropshadow(
         gaussian,
         rgba(0,0,0,0.9),
@@ -419,12 +367,9 @@
         0,
         2
     );
-
-    /* Espaciado elegante */
     -fx-letter-spacing: 0.5px;
 }
 
-/* Efecto hover */
 .label-Visibles:hover {
 
     -fx-text-fill: #990000;
@@ -440,11 +385,7 @@
         0
     );
 }
-  /* ===================================
-   PROGRESS BAR 
-   =================================== */
 
-/* Fondo de la barra */
 .progress-bar {
 
     -fx-pref-height: 20px;
@@ -457,10 +398,6 @@
     -fx-border-radius: 12;
 }
 
-/* Parte vacía */
-/* =========================
-   CLASE BARRA ROJA
-   ========================= */
 
 .barra-roja > .track {
     -fx-background-color: #1b1b1b;
@@ -485,10 +422,6 @@
 }
 
 
-/* =========================
-   CLASE BARRA AZUL
-   ========================= */
-
 .barra-azul > .track {
     -fx-background-color: #1b1b1b;
     -fx-background-radius: 10;
@@ -512,10 +445,6 @@
 }
 
 
-/* =========================
-   CLASE BARRA MORADA
-   ========================= */
-
 .barra-morada > .track {
     -fx-background-color: #1b1b1b;
     -fx-background-radius: 10;
@@ -538,9 +467,6 @@
     );
 }
 
-/* =========================
-   TAB ROJO
-   ========================= */
 
 .tab-rojo {
 
@@ -564,10 +490,6 @@
 }
 
 
-/* =========================
-   TAB VERDE
-   ========================= */
-
 .tab-verde {
 
     -fx-background-color:
@@ -590,10 +512,6 @@
 }
 
 
-/* =========================
-   TAB AZUL
-   ========================= */
-
 .tab-azul {
 
     -fx-background-color:
@@ -614,7 +532,6 @@
 
     -fx-font-family: "Poppins", "Segoe UI", sans-serif;
 }
-/* Quitar borde azul/focus del Tab */
 
 .tab-pane .tab-header-area .tab {
 
@@ -622,24 +539,10 @@
     -fx-faint-focus-color: transparent;
 }
 
-/* También elimina el borde interno azul */
 .tab-pane *.tab-header-background {
      -fx-background-color: transparent;
 }
 
-
-
-
-
-
-/* =========================
-   HBOX METAL VERDE
-   ========================= */
-
-
-/* =========================
-   HOVER
-   ========================= */
 .boton-mejora {
     -fx-background-color: linear-gradient(
         to bottom,
@@ -671,11 +574,6 @@
     );
 }
 
-
-/* =========================
-   CLICK
-   ========================= */
-
 .boton-mejora:pressed {
 
     -fx-scale-x: 0.96;
@@ -696,14 +594,6 @@
     );
 }
 
-
-
-
-
-/* =========================
-   SCROLLPANE TRANSPARENTE
-   ========================= */
-
 .scroll-pane {
 
     -fx-background-color: transparent;
@@ -711,35 +601,26 @@
     -fx-background: transparent;
 }
 
-/* Área interna */
 .scroll-pane > .viewport {
 
     -fx-background-color: transparent;
 }
 
-/* Contenedor interno */
 .scroll-pane .content {
 
     -fx-background-color: transparent;
 }
 
-/* Esquinas */
 .scroll-pane .corner {
 
     -fx-background-color: transparent;
 }
-/* =========================
-   SCROLLBAR MODERNA
-   ========================= */
 
-/* Fondo general */
 .scroll-bar {
 
     -fx-background-color: transparent;
 }
 
-
-/* TRACK (fondo de la barra) */
 .scroll-bar .track {
 
     -fx-background-color:
@@ -750,8 +631,6 @@
     -fx-border-radius: 10;
 }
 
-
-/* THUMB (parte que se mueve) */
 .scroll-bar .thumb {
 
     -fx-background-color:
@@ -771,8 +650,6 @@
     );
 }
 
-
-/* Hover */
 .scroll-bar .thumb:hover {
 
     -fx-background-color:
@@ -781,8 +658,6 @@
         #4a4a4a);
 }
 
-
-/* Click */
 .scroll-bar .thumb:pressed {
 
     -fx-background-color:
@@ -791,8 +666,6 @@
         #666666);
 }
 
-
-/* Quitar botones feos */
 .scroll-bar .increment-button,
 .scroll-bar .decrement-button {
 
@@ -802,7 +675,6 @@
 }
 
 
-/* Quitar flechas */
 .scroll-bar .increment-arrow,
 .scroll-bar .decrement-arrow {
 
@@ -819,12 +691,11 @@
 }
 
 .dialog-pane.fx-FondoJuego11 {
-    -fx-background-color: #1e1e24; /* Tu color oscuro de fondo */
-    -fx-border-color: #ff4444;     /* Borde rojo de tu juego */
+    -fx-background-color: #1e1e24; 
+    -fx-border-color: #ff4444; 
     -fx-border-width: 2px;
 }
 
-/* 🔤 2. TEXTO DE ARRIBA (Header) */
 .dialog-pane.label-usuario .header-panel .label {
     -fx-text-fill: #ffffff;       
     -fx-font-size: 16px;          
@@ -832,19 +703,16 @@
     -fx-font-family: "Arial", sans-serif; 
 }
 
-/* 🔤 3. TEXTO DE ABAJO (Content) */
-/* 🔥 LE CORREMOS TU CLASE DIRECTAMENTE AL TEXTO REBELDE DE JAVAFX */
+
 .dialog-pane.label-usuario .content .label,
 .dialog-pane.label-usuario .content .text {
-    /* Aquí le decimos a JavaFX que copie las propiedades de tu clase .label-usuario */
-    -fx-text-fill: inherit; 
-    -fx-font: inherit;
-    
-    /* Por si acaso JavaFX usa un componente Text, forzamos el color que trae tu clase */
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff; 
     -fx-fill: #ffffff; 
 }
 
-/* 🕹️ 4. BOTONES */
 .dialog-pane.fx-FondoJuego11 .button {
     -fx-background-color: #33333b;
     -fx-text-fill: white;
@@ -855,8 +723,6 @@
     -fx-background-color: #ff4444;
     -fx-text-fill: black;
 }
-
-
 
 .slider .track {
     -fx-background-color: #1f2937;
@@ -879,7 +745,6 @@
     -fx-background-color: #4ade80;
 }
 
-
 .tab .tab-label {
     -fx-text-fill: white;
     -fx-font-size: 25px;
@@ -898,7 +763,7 @@
     -fx-effect: dropshadow(gaussian, #ff0000, 5, 0.8, 0, 0);
 }
 .label-error {
-    -fx-font-size: 28px;
+    -fx-font-size: 40px;
     -fx-font-weight: bold;
     -fx-text-fill: #ff4444;
 

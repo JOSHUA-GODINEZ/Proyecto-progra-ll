@@ -35,7 +35,7 @@
                      </font>
                   </Label>
                   <ImageView fitHeight="74.0" fitWidth="572.0" pickOnBounds="true" preserveRatio="true" styleClass="mi-image-view-Monedas" HBox.hgrow="ALWAYS" />
-                  <Label fx:id="LblPoints" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="300.0" minWidth="200.0" prefHeight="100.0" prefWidth="160.0" styleClass="label-usuario1" HBox.hgrow="ALWAYS">
+                  <Label fx:id="LblPoints" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="300.0" minWidth="200.0" prefHeight="100.0" prefWidth="160.0" styleClass="label-usuario" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -55,7 +55,7 @@
                                  <children>
                                     <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="99.0" prefHeight="99.0" prefWidth="878.0" styleClass="fx-FondoJuego13" VBox.vgrow="ALWAYS">
                                        <children>
-                                          <Label fx:id="lblBombaD" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="0.0" text=" Bomba Daño" HBox.hgrow="ALWAYS">
+                                          <Label fx:id="lblBombaD" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="78.0" prefWidth="151.0" text=" Bomba Daño" HBox.hgrow="ALWAYS">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
@@ -156,7 +156,7 @@
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="100.0" prefHeight="25.0" prefWidth="286.0" styleClass="fx-FondoJuego13" VBox.vgrow="ALWAYS">
                                        <children>
-                                          <Label fx:id="lblBombaR" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="0.0" text="Bomba Rango" HBox.hgrow="ALWAYS">
+                                          <Label fx:id="lblBombaR" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="79.0" prefWidth="150.0" text="Bomba Rango" HBox.hgrow="ALWAYS">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
@@ -257,7 +257,7 @@
                                     </HBox>
                                     <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="100.0" prefHeight="40.0" prefWidth="846.0" styleClass="fx-FondoJuego13" VBox.vgrow="ALWAYS">
                                        <children>
-                                          <Label fx:id="lblHieloD" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="0.0" text=" Hielo Duración" HBox.hgrow="ALWAYS">
+                                          <Label fx:id="lblHieloD" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="79.0" prefWidth="155.0" text=" Hielo Duración" HBox.hgrow="ALWAYS">
                                              <graphic>
                                                 <ImageView fitHeight="110.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" styleClass="mi-image-view-mejoraDuratio" />
                                              </graphic>
@@ -361,7 +361,7 @@
                                     </HBox>
                                     <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="100.0" prefHeight="100.0" prefWidth="200.0" styleClass="fx-FondoJuego13" VBox.vgrow="ALWAYS">
                                        <children>
-                                          <Label fx:id="lblHieloR" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="76.0" prefWidth="0.0" text="Hielo Rango" HBox.hgrow="ALWAYS">
+                                          <Label fx:id="lblHieloR" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="79.0" prefWidth="158.0" text="Hielo Rango" HBox.hgrow="ALWAYS">
                                              <graphic>
                                                 <ImageView fitHeight="110.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" styleClass="mi-image-view-mejorarFreezeRange" />
                                              </graphic>
@@ -477,7 +477,7 @@
                                  <children>
                                     <HBox alignment="CENTER" maxHeight="140.0" maxWidth="1.7976931348623157E308" prefHeight="34.0" prefWidth="278.0" styleClass="fx-FondoJuego11" VBox.vgrow="ALWAYS">
                                        <children>
-                                          <Label fx:id="lblGunD" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="119.0" prefWidth="0.0" text="Arma Daño" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                          <Label fx:id="lblGunD" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="119.0" prefWidth="122.0" text="Arma Daño" textFill="WHITE" HBox.hgrow="ALWAYS">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
@@ -559,7 +559,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button fx:id="btnDamageGun" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onActionDamageGun" prefHeight="32.0" prefWidth="69.0" text="Mejorar" HBox.hgrow="ALWAYS">
+                                          <Button fx:id="btnDamageGun" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onActionDamageGun" prefHeight="119.0" prefWidth="0.0" text="Mejorar" HBox.hgrow="ALWAYS">
                                              <graphic>
                                                 <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" styleClass="mi-image-view-Mejorar" />
                                              </graphic>
@@ -578,7 +578,7 @@
                                     </HBox>
                                     <HBox maxHeight="140.0" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="286.0" styleClass="fx-FondoJuego11" VBox.vgrow="ALWAYS">
                                        <children>
-                                          <Label fx:id="lblGunS" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="119.0" prefWidth="0.0" text="Arma Velocidad" HBox.hgrow="ALWAYS">
+                                          <Label fx:id="lblGunS" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="119.0" prefWidth="158.0" text="Arma Velocidad" HBox.hgrow="ALWAYS">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
@@ -697,7 +697,7 @@
                                  <children>
                                     <HBox alignment="CENTER" fillHeight="false" maxHeight="140.0" maxWidth="1.7976931348623157E308" minHeight="100.0" prefHeight="54.0" prefWidth="876.0" styleClass="fx-FondoJuego14" VBox.vgrow="ALWAYS">
                                        <children>
-                                          <Label fx:id="lblVida" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="108.0" prefWidth="0.0" text="Vida" HBox.hgrow="ALWAYS">
+                                          <Label fx:id="lblVida" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="93.0" prefWidth="118.0" text="Vida" HBox.hgrow="ALWAYS">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
@@ -798,7 +798,7 @@
                                     </HBox>
                                     <HBox alignment="CENTER" fillHeight="false" maxHeight="140.0" maxWidth="1.7976931348623157E308" minHeight="100.0" prefHeight="98.0" prefWidth="815.0" styleClass="fx-FondoJuego14" VBox.vgrow="ALWAYS">
                                        <children>
-                                          <Label fx:id="lblCapacidad" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="107.0" prefWidth="0.0" text="Elixir Capacidad" HBox.hgrow="ALWAYS">
+                                          <Label fx:id="lblCapacidad" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="93.0" prefWidth="122.0" text="Elixir Capacidad" HBox.hgrow="ALWAYS">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
@@ -899,7 +899,7 @@
                                     </HBox>
                                     <HBox alignment="CENTER" fillHeight="false" maxHeight="140.0" maxWidth="1.7976931348623157E308" minHeight="100.0" prefHeight="0.0" prefWidth="814.0" styleClass="fx-FondoJuego14" VBox.vgrow="ALWAYS">
                                        <children>
-                                          <Label fx:id="lblVelocidad" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="107.0" prefWidth="20.0" text="Elixir Velocidad" HBox.hgrow="ALWAYS">
+                                          <Label fx:id="lblVelocidad" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="93.0" prefWidth="130.0" text="Elixir Velocidad" HBox.hgrow="ALWAYS">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
@@ -1014,12 +1014,12 @@
             </TabPane>
             <HBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="898.0" VBox.vgrow="ALWAYS">
                <children>
-                  <Button fx:id="btnHome" maxHeight="1.7976931348623157E308" maxWidth="300.0" mnemonicParsing="false" onAction="#onActionHome" prefHeight="87.0" prefWidth="247.0" text=" Menu Principal" textFill="WHITE" HBox.hgrow="ALWAYS">
+                  <Button fx:id="btnHome" maxHeight="100.0" maxWidth="300.0" mnemonicParsing="false" onAction="#onActionHome" prefHeight="50.0" prefWidth="300.0" text=" Menu Principal" textFill="WHITE" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="20.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="64.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" styleClass="mi-image-view-Menu" />
+                        <ImageView fitHeight="393.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" styleClass="mi-image-view-Menu" />
                      </graphic>
                      <styleClass>
                         <String fx:value="fx-gameButton" />

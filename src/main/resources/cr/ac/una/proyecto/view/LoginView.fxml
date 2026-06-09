@@ -43,7 +43,10 @@
                <children>
                   <ScrollPane fx:id="scrollUsuarios" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                      <content>
-                        <VBox fx:id="rootUsers" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="10.0" />
+                        <VBox fx:id="rootUsers" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding></VBox>
                      </content>
                   </ScrollPane>
                </children>
